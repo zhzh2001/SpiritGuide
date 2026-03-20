@@ -21,50 +21,50 @@
         const database = [
             <% for thing in dragons do %>
             {
-                text: "<%= thing.name_en %> <%= js_string_escape(thing.desc_en) %>",
+                text: "<%= thing.display_name %> <%= js_string_escape(thing.display_desc) %>",
                 image: "assets/card/<%= thing.id %>.png",
                 link: "dragon/<%= thing.id %>.html",
-                name: "<%= thing.name_en %>",
+                name: "<%= thing.display_name %>",
                 type: "Dragon",
             },
             <% end %>
 
             <% for thing in skills do %>
             {
-                text: "<%= thing.name_en %> <%= js_string_escape(thing.desc_en) %>",
+                text: "<%= thing.display_name %> <%= js_string_escape(thing.display_desc) %>",
                 image: "assets/skill/<%= thing.icon %>.png",
                 link: "skill/<%= thing.id %>.html",
-                name: "<%= thing.name_en %>",
+                name: "<%= thing.display_name %>",
                 type: "Skill",
             },
             <% end %>
 
             <% for thing in accessories do %>
             {
-                text: "<%= thing.name_en %> <%= js_string_escape(thing.desc_en) %>",
+                text: "<%= thing.display_name %> <%= js_string_escape(thing.display_desc) %>",
                 image: "assets/accessory/<%= thing.id %>.png",
                 link: "accessory/<%= thing.id %>.html",
-                name: "<%= thing.name_en %>",
+                name: "<%= thing.display_name %>",
                 type: "Held Item",
             },
             <% end %>
 
             <% for thing in effects do %>
             {
-                text: "<%= thing.name_en %> <%= js_string_escape(thing.desc_en) %>",
+                text: "<%= thing.display_name %> <%= js_string_escape(thing.display_desc) %>",
                 image: "assets/effect/<%= thing.id %>.png",
                 link: "effect/<%= thing.id %>.html",
-                name: "<%= thing.name_en %>",
+                name: "<%= thing.display_name %>",
                 type: "State",
             },
             <% end %>
 
             <% for thing in talents do %>
             {
-                text: "<%= thing.name_en %> <%= js_string_escape(thing.desc_en) %>",
+                text: "<%= thing.display_name %> <%= js_string_escape(thing.display_desc) %>",
                 image: "assets/skill/0.png",
                 link: "talent/<%= thing.id %>.html",
-                name: "<%= thing.name_en %>",
+                name: "<%= thing.display_name %>",
                 type: "Talent",
             },
             <% end %>

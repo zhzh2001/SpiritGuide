@@ -1,10 +1,10 @@
 <% dragon = args[0] %>
 
 <div class="card col-4 col-md-3 col-lg-2">
-    <a href="../dragon/<%= dragon.id %>.html#<%= dragon.name_en %>">
+    <a href="../dragon/<%= dragon.id %>.html#<%= dragon.display_name %>">
         <img src="../assets/card/<%= dragon.id %>.png" class="card-img-top">
         <div class="card-body">
-            <h5 class="card-title"><%= dragon.name_en %></h5>
+            <h5 class="card-title"><%= dragon.display_name %></h5>
         </div>
     </a>
 </div>

@@ -2,5 +2,5 @@
 <% if talent.nil? %>
     <span>N/A</span>
 <% else %>
-    <span><a href="../talent/<%= talent.id %>.html#<%= talent.name_en %>"><%= talent.name_en %></a> - <%= talent.desc_en %></span>
+    <span><a href="../talent/<%= talent.id %>.html#<%= talent.display_name %>"><%= talent.display_name %></a> - <%= talent.display_desc %></span>
 <% end %>

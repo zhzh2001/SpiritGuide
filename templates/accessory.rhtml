@@ -3,7 +3,7 @@
         <div class="col">
             <img width="72px" height="72px" style="display: inline-block; image-rendering: pixelated;" src="../assets/accessory/<%= accessory.id %>.png">
             <h1 style="display: inline-block; vertical-align: middle;" class="fw-bold text-decoration-underline display-3">
-                <%= accessory.name_en %>
+                <%= accessory.display_name %>
             </h1>
         </div>
     </div>
@@ -17,6 +17,6 @@
         <div class="col"><strong>Price:</strong> <%= accessory.price %> CS</div>
     </div>
     <div class="row">
-        <div class="col"><strong>Effect:</strong> <%= accessory.desc_en %></div>
+        <div class="col"><strong>Effect:</strong> <%= accessory.display_desc %></div>
     </div>
 </div>

@@ -8,7 +8,7 @@
                     <img width="72px" height="72px" style="image-rendering: pixelated; position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/<%= SpiritGuide::SKILL_CATEGORIES[skillcat] %>.png">
                 </span>
                 <h1 style="display: inline-block; vertical-align: middle;" class="fw-bold text-decoration-underline display-3">
-                    <%= skill.name_en %>
+                    <%= skill.display_name %>
                 </h1>
             </span>
         </div>
@@ -29,13 +29,13 @@
         <div class="col"><strong>Power:</strong> <%= skill.power %></div>
     </div>
     <div class="row">
-        <div class="col"><strong>Effect:</strong> <%= skill.desc_en %></div>
+        <div class="col"><strong>Effect:</strong> <%= skill.display_desc %></div>
     </div>
 
     <div class="row"><div class="col">&nbsp;</div></div>
 
     <div class="row">
-        <div class="col"><strong>Dragons with <%= skill.name_en %>:</strong></div>
+        <div class="col"><strong>Dragons with <%= skill.display_name %>:</strong></div>
     </div>
 
     <% linked_dragons = dragons.select {|dragon| skill_pools[dragon.id].any? {|s| s == skill.id } } %>

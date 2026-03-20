@@ -2,5 +2,5 @@
 <% if thing.nil? %>
     <span>N/A</span>
 <% else %>
-    <a href="../effect/<%= thing.id %>.html#<%= thing.name_en %>"><%= thing.name_en %></a>
+    <a href="../effect/<%= thing.id %>.html#<%= thing.display_name %>"><%= thing.display_name %></a>
 <% end %>

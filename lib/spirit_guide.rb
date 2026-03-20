@@ -11,6 +11,11 @@ require "csv"
 
 # General Dragon Spirits utilities.
 module SpiritGuide
+  class << self
+    attr_accessor :lang
+  end
+  @lang = 'en'
+
   # The six stats.
   STATS = %i[hp atk mat def mdf spd].freeze
 
@@ -42,6 +47,8 @@ module SpiritGuide
 end
 
 if __FILE__ == $PROGRAM_NAME
+  SpiritGuide.lang = ARGV[1] == 'zh' ? 'zh' : 'en'
+
   # gather data
   dragons = []
   File.open("#{ARGV[0]}/GameData/Creatures.rvdatax", "rb") do |file|
@@ -191,7 +198,7 @@ if __FILE__ == $PROGRAM_NAME
     copy_image("#{ARGV[0]}/Graphics/Battlers/d_#{dragon.id}.rvdata2", "pages/assets/dragon/#{dragon.id}.png")
     copy_image("#{ARGV[0]}/Graphics/System/DragonCards/c_#{dragon.id}.rvdata2", "pages/assets/card/#{dragon.id}.png")
     File.write("pages/dragon/#{dragon.id}.html",
-               render_page(dragon.name_en,
+               render_page(dragon.display_name,
                            dragon_template.result(dragon_scope(dragon, dragons, skills, accessories, effects, talents, items,
                                                                skill_pools[dragon.id]))))
   end
@@ -202,7 +209,7 @@ if __FILE__ == $PROGRAM_NAME
   skills.each do |skill|
     SpiritGuide::Icons.get_icon(icons, skill.icon).write("pages/assets/skill/#{skill.icon}.png")
     File.write("pages/skill/#{skill.id}.html",
-               render_page(skill.name_en, skill_template.result(skill_scope(skill, dragons, skill_pools))))
+               render_page(skill.display_name, skill_template.result(skill_scope(skill, dragons, skill_pools))))
   end
 
   acc_template = ERB.new(File.read("#{File.dirname(__FILE__)}/../templates/accessory.rhtml"))
@@ -211,7 +218,7 @@ if __FILE__ == $PROGRAM_NAME
   accessories.each do |acc|
     SpiritGuide::Icons.get_icon(icons, acc.icon).write("pages/assets/accessory/#{acc.id}.png")
     File.write("pages/accessory/#{acc.id}.html",
-               render_page(acc.name_en, acc_template.result(acc_scope(acc))))
+               render_page(acc.display_name, acc_template.result(acc_scope(acc))))
   end
 
   se_template = ERB.new(File.read("#{File.dirname(__FILE__)}/../templates/effect.rhtml"))
@@ -220,14 +227,14 @@ if __FILE__ == $PROGRAM_NAME
   effects.each do |se|
     SpiritGuide::Icons.get_icon(icons, se.icon).write("pages/assets/effect/#{se.id}.png")
     File.write("pages/effect/#{se.id}.html",
-               render_page(se.name_en, se_template.result(se_scope(se))))
+               render_page(se.display_name, se_template.result(se_scope(se))))
   end
 
   talent_template = ERB.new(File.read("#{File.dirname(__FILE__)}/../templates/talent.rhtml"))
   FileUtils.mkdir_p("pages/talent")
   talents.each do |talent|
     File.write("pages/talent/#{talent.id}.html",
-               render_page(talent.name_en, talent_template.result(talent_scope(talent, dragons))))
+               render_page(talent.display_name, talent_template.result(talent_scope(talent, dragons))))
   end
 
   # export HTML of static pages

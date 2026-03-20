@@ -40,8 +40,8 @@
                                                 <th scope="row">
                                                     <span>
                                                         <img height="24px" style="display: inline-block;" src="assets/card/<%= dragon.id %>.png">
-                                                        <a href="dragon/<%= dragon.id %>.html#<%= dragon.name_en %>" style="display: inline-block;">
-                                                            <%= dragon.name_en %>
+                                                        <a href="dragon/<%= dragon.id %>.html#<%= dragon.display_name %>" style="display: inline-block;">
+                                                            <%= dragon.display_name %>
                                                         </a>
                                                     </span>
                                                 </th>
@@ -95,8 +95,8 @@
                                                             <img style="position: relative; top: 0px; left: 0px;" src="assets/skill/<%= skill.icon %>.png">
                                                             <img style="position: absolute; top: 0px; left: 0px;" src="assets/skillcat/<%= SpiritGuide::SKILL_CATEGORIES[skillcat] %>.png">
                                                         </span>
-                                                        <a href="skill/<%= skill.id %>.html#<%= skill.name_en %>" style="display: inline-block;">
-                                                            <%= skill.name_en %>
+                                                        <a href="skill/<%= skill.id %>.html#<%= skill.display_name %>" style="display: inline-block;">
+                                                            <%= skill.display_name %>
                                                         </a>
                                                     </span>
                                                 </th>
@@ -105,7 +105,7 @@
                                                 <td><%= SpiritGuide::SKILL_CATEGORIES[skillcat].to_s.capitalize %></td>
                                                 <td><%= skill.sp_cost %></td>
                                                 <td><%= skill.power %></td>
-                                                <td><%= skill.desc_en %></td>
+                                                <td><%= skill.display_desc %></td>
                                             </tr>
                                         <% end %>
                                     </tbody>
@@ -141,15 +141,15 @@
                                                 <th scope="row">
                                                     <span>
                                                         <img style="display: inline-block;" src="assets/accessory/<%= accessory.id %>.png">
-                                                        <a href="accessory/<%= accessory.id %>.html#<%= accessory.name_en %>" style="display: inline-block;">
-                                                            <%= accessory.name_en %>
+                                                        <a href="accessory/<%= accessory.id %>.html#<%= accessory.display_name %>" style="display: inline-block;">
+                                                            <%= accessory.display_name %>
                                                         </a>
                                                     </span>
                                                 </th>
                                                 <td><%= accessory.id %></td>
                                                 <td><%= render("rating", accessory.rarity) %></td>
                                                 <td><%= accessory.price %></td>
-                                                <td><%= accessory.desc_en %></td>
+                                                <td><%= accessory.display_desc %></td>
                                             </tr>
                                         <% end %>
                                     </tbody>
@@ -184,14 +184,14 @@
                                                 <th scope="row">
                                                     <span>
                                                         <img style="display: inline-block;" src="assets/effect/<%= effect.id %>.png">
-                                                        <a href="effect/<%= effect.id %>.html#<%= effect.name_en %>" style="display: inline-block;">
-                                                            <%= effect.name_en %>
+                                                        <a href="effect/<%= effect.id %>.html#<%= effect.display_name %>" style="display: inline-block;">
+                                                            <%= effect.display_name %>
                                                         </a>
                                                     </span>
                                                 </th>
                                                 <td><%= effect.id %></td>
                                                 <td><%= effect_category(effect.category) %></td>
-                                                <td><%= effect.desc_en %></td>
+                                                <td><%= effect.display_desc %></td>
                                             </tr>
                                         <% end %>
                                     </tbody>
@@ -223,12 +223,12 @@
                                         <% for talent in talents do %>
                                             <tr>
                                                 <th scope="row">
-                                                    <a href="talent/<%= talent.id %>.html#<%= talent.name_en %>" style="display: inline-block;">
-                                                        <%= talent.name_en %>
+                                                    <a href="talent/<%= talent.id %>.html#<%= talent.display_name %>" style="display: inline-block;">
+                                                        <%= talent.display_name %>
                                                     </a>
                                                 </th>
                                                 <td><%= talent.id %></td>
-                                                <td><%= talent.desc_en %></td>
+                                                <td><%= talent.display_desc %></td>
                                             </tr>
                                         <% end %>
                                     </tbody>

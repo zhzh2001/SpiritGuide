@@ -302,6 +302,10 @@ class RPG::BaseItem
   # Extensions specifically for Dragon Spirits.
   attr_accessor :name_en, :description_en, :cat, :rarity, :party_effect, :attr_gain, :iv_change, :ev_change,
                 :materials, :cost1, :special_material, :collection_attr_gain
+
+  def display_name
+    SpiritGuide.lang == 'zh' ? name : name_en
+  end
 end
 
 class RPG::Actor < RPG::BaseItem

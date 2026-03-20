@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
             <h1 class="fw-bold text-decoration-underline display-3">
-                <%= talent.name_en %>
+                <%= talent.display_name %>
             </h1>
         </div>
     </div>
@@ -10,13 +10,13 @@
         <div class="col"><strong>Internal ID:</strong> <%= talent.id %></div>
     </div>
     <div class="row">
-        <div class="col"><strong>Effect:</strong> <%= talent.desc_en %></div>
+        <div class="col"><strong>Effect:</strong> <%= talent.display_desc %></div>
     </div>
 
     <div class="row"><div class="col">&nbsp;</div></div>
 
     <div class="row">
-        <div class="col"><strong>Dragons with <%= talent.name_en %>:</strong></div>
+        <div class="col"><strong>Dragons with <%= talent.display_name %>:</strong></div>
     </div>
 
     <% linked_dragons = dragons.select {|dragon| flatten_talents(dragon.base_talents).any? {|t| t == talent.id} } %>

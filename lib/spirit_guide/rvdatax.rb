@@ -3,10 +3,25 @@ module SpiritGuide
   module RVDataX
     require_relative "ksy/rvdatax"
 
+    module Localization
+      def display_name
+        SpiritGuide.lang == 'zh' ? name : name_en
+      end
+
+      def display_desc
+        SpiritGuide.lang == 'zh' ? desc : desc_en
+      end
+    end
+
     # A dragon definition.
     class Dragon
+      include Localization
       attr_accessor :id, :name, :name_en, :desc, :desc_en, :area, :area_en, :type, :base_talents, :base_params, :rarity,
                     :ev_gain, :base_skills, :learn_skills, :learn_talents, :traits, :capture_pool, :capture_chance, :offset
+
+      def display_area
+        SpiritGuide.lang == 'zh' ? area : area_en
+      end
 
       def scope
         Kernel.binding
@@ -34,6 +49,7 @@ module SpiritGuide
 
     # A dragon active skill definition.
     class Skill
+      include Localization
       attr_accessor :id, :name, :name_en, :desc, :desc_en, :icon, :type, :category, :channel, :power, :sp_cost, :traits
 
       def scope
@@ -58,7 +74,7 @@ module SpiritGuide
         scope = result.scope
         Kernel.eval(entry.contents, scope)
 
-        if result.name_en.nil? || result.name_en.strip.empty?
+        if result.display_name.nil? || result.display_name.strip.empty?
           index += 1
           next
         end
@@ -72,6 +88,7 @@ module SpiritGuide
 
     # A dragon equipped item definition.
     class Accessory
+      include Localization
       attr_accessor :id, :name, :name_en, :desc, :desc_en, :icon, :category, :rarity, :price, :sell_price,
                     :trigger_script, :effect_script, :traits, :attr_mod, :attr_gain, :party_effect
 
@@ -97,7 +114,7 @@ module SpiritGuide
         scope = result.scope
         Kernel.eval(entry.contents, scope)
 
-        if result.name_en.nil? || result.name_en.strip.empty?
+        if result.display_name.nil? || result.display_name.strip.empty?
           index += 1
           next
         end
@@ -111,6 +128,7 @@ module SpiritGuide
 
     # A dragon status effect definition.
     class StatusEffect
+      include Localization
       attr_accessor :id, :name, :desc, :icon, :category, :desc_en, :name_en
 
       def scope
@@ -135,7 +153,7 @@ module SpiritGuide
         scope = result.scope
         Kernel.eval(entry.contents, scope)
 
-        if result.name_en.nil? || result.name_en.strip.empty?
+        if result.display_name.nil? || result.display_name.strip.empty?
           index += 1
           next
         end
@@ -149,6 +167,7 @@ module SpiritGuide
 
     # A dragon passive trait definition.
     class Talent
+      include Localization
       attr_accessor :id, :name, :desc, :icon, :category, :desc_en, :name_en
 
       def scope
@@ -173,7 +192,7 @@ module SpiritGuide
         scope = result.scope
         Kernel.eval(entry.contents, scope)
 
-        if result.name_en.nil? || result.name_en.strip.empty?
+        if result.display_name.nil? || result.display_name.strip.empty?
           index += 1
           next
         end

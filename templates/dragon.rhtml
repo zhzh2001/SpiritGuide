@@ -3,12 +3,12 @@
         <div class="col container">
             <div class="row">
                 <div class="col">
-                    <h1 class="fw-bold text-decoration-underline display-3"><%= dragon.name_en %></h1>
+                    <h1 class="fw-bold text-decoration-underline display-3"><%= dragon.display_name %></h1>
                 </div>
             </div>
             <div class="row p-2">
                 <div class="col">
-                    <%= dragon.desc_en %>
+                    <%= dragon.display_desc %>
                 </div>
             </div>
             <div class="row">
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="col">
-            <img class="float-end" height="400vh" src="../assets/dragon/<%= dragon.id %>.png" alt="<%= dragon.name_en %>">
+            <img class="float-end" height="400vh" src="../assets/dragon/<%= dragon.id %>.png" alt="<%= dragon.display_name %>">
         </div>
     </div>
     <div class="row">
@@ -33,7 +33,7 @@
             
             <div class="row"><div class="col">&nbsp;</div></div>
             
-            <div class="row"><div class="col"><strong>Found at:</strong> <%= dragon.area_en %></div></div>
+            <div class="row"><div class="col"><strong>Found at:</strong> <%= dragon.display_area %></div></div>
             <div class="row"><div class="col"><strong>Contract conditions:</strong>
                 <% case dragon.capture_pool[0]; when 0 %> N/A
                     <% when 1 %>  Simply defeat your opponent
@@ -57,9 +57,9 @@
                     <% when 23 %> Defeat your opponent when the opponent has more than <%= dragon.capture_pool[1] %> levels of weakened stats
                     <% when 24 %> Defeat your opponent without any HP heal
                     <% when 25 %> Defeat your opponent while having more than <%= dragon.capture_pool[1] %> Crystal Shards
-                    <% when 26 %> <% thing = dragons.find {|thing| thing.id == dragon.capture_pool[1] } %> Defeat your opponent with <a href="../effect/<%= thing.id %>.html#<%= thing.name_en %>"><%= thing.name_en %></a>
+                    <% when 26 %> <% thing = dragons.find {|thing| thing.id == dragon.capture_pool[1] } %> Defeat your opponent with <a href="../effect/<%= thing.id %>.html#<%= thing.display_name %>"><%= thing.display_name %></a>
                     <% when 27 %> Defeat your opponent while both sides are having <%= render("effect_link", dragon.capture_pool[1], effects) %> states
-                    <% when 28 %> <% thing = items.find {|thing| thing.id == dragon.capture_pool[1] } %> Defeat your opponent while having <%= thing.name_en %>
+                    <% when 28 %> <% thing = items.find {|thing| thing.id == dragon.capture_pool[1] } %> Defeat your opponent while having <%= thing.display_name %>
                     <% when 29 %> Defeat your opponent when your last strike is at a CP greater than (or equal to) <%= (dragon.capture_pool[1] * 100).to_i %>%
                     <% when 30 %> Defeat your opponent while your current Dragon Spirit HP is between <%= dragon.capture_pool[1] %> to <%= dragon.capture_pool[2] %>
                     <% when 31 %> Defeat your opponent while your team Spirits' elements are <%= dragon.capture_pool[1].to_s.capitalize %>
@@ -123,11 +123,11 @@
                                     <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/<%= skill.icon %>.png">
                                     <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/<%= SpiritGuide::SKILL_CATEGORIES[skillcat] %>.png">
                                 </span>
-                                <a href="../skill/<%= skill.id %>.html#<%= skill.name_en %>"><%= skill.name_en %></a>
+                                <a href="../skill/<%= skill.id %>.html#<%= skill.display_name %>"><%= skill.display_name %></a>
                             </th>
                             <td><%= skill.sp_cost %></td>
                             <td><%= skill.power %></td>
-                            <td><%= skill.desc_en %></td>
+                            <td><%= skill.display_desc %></td>
                         </tr>
                     <% end %>
                 </tbody>
