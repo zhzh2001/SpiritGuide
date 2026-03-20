@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+        <title>
+            
+                蓝鹃龙 - Spirit Guide
+            
+        </title>
+        <style>
+            .fs-xxs {
+                font-size: xx-small;
+            }
+
+            .fs-xs {
+                font-size: x-small;
+            }
+
+            .fs-s {
+                font-size: small;
+            }
+
+            .fs-m {
+                font-size: medium;
+            }
+
+            .fs-l {
+                font-size: large;
+            }
+
+            .fs-xl {
+                font-size: x-large;
+            }
+
+            .fs-xxl {
+                font-size: xx-large;
+            }
+
+            @media (min-width: 576px) {
+                /* sm */
+                .fs-xxs-sm {
+                font-size: xx-small;
+                }
+
+                .fs-xs-sm {
+                font-size: x-small;
+                }
+
+                .fs-s-sm {
+                font-size: small;
+                }
+
+                .fs-m-sm {
+                font-size: medium;
+                }
+
+                .fs-l-sm {
+                font-size: large;
+                }
+
+                .fs-xl-sm {
+                font-size: x-large;
+                }
+
+                .fs-xxl-sm {
+                font-size: xx-large;
+                }
+            }
+
+            @media (min-width: 768px) {
+                /* md */
+                .fs-xxs-md {
+                font-size: xx-small;
+                }
+
+                .fs-xs-md {
+                font-size: x-small;
+                }
+
+                .fs-s-md {
+                font-size: small;
+                }
+
+                .fs-m-md {
+                font-size: medium;
+                }
+
+                .fs-l-md {
+                font-size: large;
+                }
+
+                .fs-xl-md {
+                font-size: x-large;
+                }
+
+                .fs-xxl-md {
+                font-size: xx-large;
+                }
+            }
+
+            @media (min-width: 992px) {
+                /* lg */
+                .fs-xxs-lg {
+                font-size: xx-small;
+                }
+
+                .fs-xs-lg {
+                font-size: x-small;
+                }
+
+                .fs-s-lg {
+                font-size: small;
+                }
+
+                .fs-m-lg {
+                font-size: medium;
+                }
+
+                .fs-l-lg {
+                font-size: large;
+                }
+
+                .fs-xl-lg {
+                font-size: x-large;
+                }
+
+                .fs-xxl-lg {
+                font-size: xx-large;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                /* xl */
+                .fs-xxs-xl {
+                font-size: xx-small;
+                }
+
+                .fs-xs-xl {
+                font-size: x-small;
+                }
+
+                .fs-s-xl {
+                font-size: small;
+                }
+
+                .fs-m-xl {
+                font-size: medium;
+                }
+
+                .fs-l-xl {
+                font-size: large;
+                }
+
+                .fs-xl-xl {
+                font-size: x-large;
+                }
+
+                .fs-xxl-xl {
+                font-size: xx-large;
+                }
+            }
+
+            @media (min-width: 1400px) {
+                /* xxl */
+                .fs-xxs-xxl {
+                font-size: xx-small;
+                }
+
+                .fs-xs-xxl {
+                font-size: x-small;
+                }
+
+                .fs-s-xxl {
+                font-size: small;
+                }
+
+                .fs-m-xxl {
+                font-size: medium;
+                }
+
+                .fs-l-xxl {
+                font-size: large;
+                }
+
+                .fs-xl-xxl {
+                font-size: x-large;
+                }
+
+                .fs-xxl-xxl {
+                font-size: xx-large;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <div class="container">
+            <nav class="row navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/SpiritGuide/index.html">Spirit Guide</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/SpiritGuide/about.html">About</a>
+                            </li>
+                        </ul>
+                        <form action="/SpiritGuide/search.html" class="d-flex" role="search">
+                            <input
+                                id="query"
+                                name="query"
+                                class="form-control me-2"
+                                type="search"
+                                placeholder="Search..."
+                                aria-label="Search"
+                                value=""
+                            />
+                            <button class="btn btn-outline-primary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col container">
+    <div class="row justify-content-between">
+        <div class="col container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="fw-bold text-decoration-underline display-3">蓝鹃龙</h1>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    蓝鹃龙拥有优美的飞禽外形，是群岛的画家喜爱的题材之一，据说古代时蓝鹃龙曾与某位领主进行过龙魂契约，因此也经常在戏剧中以反派身份出现。
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Internal ID:</strong> 117</div>
+            </div>
+        </div>
+        <div class="col">
+            <img class="float-end" height="400vh" src="../assets/dragon/117.png" alt="蓝鹃龙">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5 container">
+            <div class="row"><div class="col"><strong>Rating:</strong> 
+<span title="1">
+    
+        <i class="bi bi-star-fill" style="color: gold;"></i>
+    
+    
+        <i class="bi bi-star" style="color: grey;"></i>
+    
+        <i class="bi bi-star" style="color: grey;"></i>
+    
+        <i class="bi bi-star" style="color: grey;"></i>
+    
+</span>
+</div></div>
+            <div class="row"><div class="col"><strong>Type:</strong> <img src="../assets/type/dark.png"> Dark</div></div>
+            <div class="row"><div class="col"><strong>Base stats:</strong></div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>HP:</strong> 80</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>ATK:</strong> 90</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>MAT:</strong> 70</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>DEF:</strong> 120</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>MDF:</strong> 130</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>SPD:</strong> 150</div></div>
+            
+            <div class="row"><div class="col"><strong><abbr title="When you win a battle, the XP all your living dragons earn is based off of the 'XP on Defeat' of the first enemy in the enemy party.">XP on Defeat:</abbr></strong>
+                13 MDF XP, 15 SPD XP
+            </div></div>
+            
+            <div class="row"><div class="col">&nbsp;</div></div>
+            
+            <div class="row"><div class="col"><strong>Found at:</strong> 构想殿</div></div>
+            <div class="row"><div class="col"><strong>Contract conditions:</strong>
+                  Simply defeat your opponent
+                    
+            </div></div>
+            <div class="row"><div class="col"><strong>Contract availibility chance:</strong> 10%</div></div>
+
+            <div class="row"><div class="col">&nbsp;</div></div>
+
+            
+            <div class="row"><div class="col"><strong>Level 15 Talent:</strong></div></div>
+            <div class="row"><div class="col-1"></div><div class="col-11">
+
+    <span><a href="../talent/20.html#深渊">深渊</a> - 暗系技能弱化对手能力时削减HP</span>
+
+</div></div>
+            <div class="row"><div class="col"><strong><abbr title="Both enemy and contracted dragons come into existence with a random second talent, among the following options. For your dragons, you can swap between these talents with certain items.">Level 20 Talent(s):</abbr></strong></div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11">
+
+    <span><a href="../talent/22.html#洞察">洞察</a> - 可以观察到对手的HP和SP</span>
+
+</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11">
+
+    <span><a href="../talent/27.html#神秘">神秘</a> - 我方SP在30以上时无法被附加不良状态</span>
+
+</div></div>
+            
+        </div>
+        <div class="col-7 container">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Skill</th>
+                        <th scope="col">SP</th>
+                        <th scope="col">Power</th>
+                        <th scope="col">Effects</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Dark support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/8.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/435.html#逐风滑翔">逐风滑翔</a>
+                            </th>
+                            <td>35</td>
+                            <td>0</td>
+                            <td>对手的HP低于一半时可以使用，直接击败对手</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Light support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/7.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/363.html#牺牲">牺牲</a>
+                            </th>
+                            <td>10</td>
+                            <td>0</td>
+                            <td>以自身最大HP的40%为代价使我方获得70SP</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Fire magical">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/1.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/magical.png">
+                                </span>
+                                <a href="../skill/103.html#炼狱业火">炼狱业火</a>
+                            </th>
+                            <td>35</td>
+                            <td>160</td>
+                            <td>使对手惊慌:无法使用辅助技能</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Dark support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/8.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/596.html#偿还">偿还</a>
+                            </th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>配置此技能时，每次对手免疫立即击败则受到高额间接伤害，本技能无法使用</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Wind support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/6.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/576.html#束气">束气</a>
+                            </th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>配置此技能时，自身SP50以上时不会被击退，本技能无法使用</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Wind magical">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/6.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/magical.png">
+                                </span>
+                                <a href="../skill/573.html#突风">突风</a>
+                            </th>
+                            <td>10</td>
+                            <td>70</td>
+                            <td>使自身集中:无法被击退</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Light support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/7.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/364.html#月光">月光</a>
+                            </th>
+                            <td>40</td>
+                            <td>0</td>
+                            <td>使自身隐遁:免疫一次物理或魔法技能、恢复:缓慢回复HP，无法连续使用</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Dark support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/8.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/413.html#恐慌">恐慌</a>
+                            </th>
+                            <td>15</td>
+                            <td>0</td>
+                            <td>弱化对手所有能力一级并使其惊慌:无法使用辅助技能</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Dark support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/8.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/403.html#冥界呼唤">冥界呼唤</a>
+                            </th>
+                            <td>35</td>
+                            <td>0</td>
+                            <td>使双方不死:无法被击败，在场上时只能使用一次</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Dark support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/8.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/444.html#沉寂">沉寂</a>
+                            </th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>配置此技能时，对手受到的直接伤害降低而间接伤害提高，本技能无法使用</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+            </div>
+            <div class="row" style="height: 10vh"></div>
+        </div>
+        <footer class="fixed-bottom bg-body-tertiary container fs-xxs fs-xs-md fs-s-lg">
+            <div class="row">
+                <div class="col">Made using <a href="https://github.com/iconmaster5326/SpiritGuide">SpiritGuide</a>, version 0.1.1.</div>
+                <div class="col text-end">Page last updated on 2026-03-18 17:55:32 -0400.</div>
+            </div>
+            <div class="row">
+                <div class="col">All graphics used are property of <a href="https://store.steampowered.com/app/1074190/Dragon_Spirits/">FHNBHJ</a>. Content here is provided for informational puproses only.</div>
+                <div class="col text-end">My favourite dragon is Dualtail. What's yours?</div>
+            </div>
+        </footer>
+    </body>
+</html>

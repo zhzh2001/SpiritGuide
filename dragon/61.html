@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+        <title>
+            
+                行星龙 - Spirit Guide
+            
+        </title>
+        <style>
+            .fs-xxs {
+                font-size: xx-small;
+            }
+
+            .fs-xs {
+                font-size: x-small;
+            }
+
+            .fs-s {
+                font-size: small;
+            }
+
+            .fs-m {
+                font-size: medium;
+            }
+
+            .fs-l {
+                font-size: large;
+            }
+
+            .fs-xl {
+                font-size: x-large;
+            }
+
+            .fs-xxl {
+                font-size: xx-large;
+            }
+
+            @media (min-width: 576px) {
+                /* sm */
+                .fs-xxs-sm {
+                font-size: xx-small;
+                }
+
+                .fs-xs-sm {
+                font-size: x-small;
+                }
+
+                .fs-s-sm {
+                font-size: small;
+                }
+
+                .fs-m-sm {
+                font-size: medium;
+                }
+
+                .fs-l-sm {
+                font-size: large;
+                }
+
+                .fs-xl-sm {
+                font-size: x-large;
+                }
+
+                .fs-xxl-sm {
+                font-size: xx-large;
+                }
+            }
+
+            @media (min-width: 768px) {
+                /* md */
+                .fs-xxs-md {
+                font-size: xx-small;
+                }
+
+                .fs-xs-md {
+                font-size: x-small;
+                }
+
+                .fs-s-md {
+                font-size: small;
+                }
+
+                .fs-m-md {
+                font-size: medium;
+                }
+
+                .fs-l-md {
+                font-size: large;
+                }
+
+                .fs-xl-md {
+                font-size: x-large;
+                }
+
+                .fs-xxl-md {
+                font-size: xx-large;
+                }
+            }
+
+            @media (min-width: 992px) {
+                /* lg */
+                .fs-xxs-lg {
+                font-size: xx-small;
+                }
+
+                .fs-xs-lg {
+                font-size: x-small;
+                }
+
+                .fs-s-lg {
+                font-size: small;
+                }
+
+                .fs-m-lg {
+                font-size: medium;
+                }
+
+                .fs-l-lg {
+                font-size: large;
+                }
+
+                .fs-xl-lg {
+                font-size: x-large;
+                }
+
+                .fs-xxl-lg {
+                font-size: xx-large;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                /* xl */
+                .fs-xxs-xl {
+                font-size: xx-small;
+                }
+
+                .fs-xs-xl {
+                font-size: x-small;
+                }
+
+                .fs-s-xl {
+                font-size: small;
+                }
+
+                .fs-m-xl {
+                font-size: medium;
+                }
+
+                .fs-l-xl {
+                font-size: large;
+                }
+
+                .fs-xl-xl {
+                font-size: x-large;
+                }
+
+                .fs-xxl-xl {
+                font-size: xx-large;
+                }
+            }
+
+            @media (min-width: 1400px) {
+                /* xxl */
+                .fs-xxs-xxl {
+                font-size: xx-small;
+                }
+
+                .fs-xs-xxl {
+                font-size: x-small;
+                }
+
+                .fs-s-xxl {
+                font-size: small;
+                }
+
+                .fs-m-xxl {
+                font-size: medium;
+                }
+
+                .fs-l-xxl {
+                font-size: large;
+                }
+
+                .fs-xl-xxl {
+                font-size: x-large;
+                }
+
+                .fs-xxl-xxl {
+                font-size: xx-large;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <div class="container">
+            <nav class="row navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/SpiritGuide/index.html">Spirit Guide</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/SpiritGuide/about.html">About</a>
+                            </li>
+                        </ul>
+                        <form action="/SpiritGuide/search.html" class="d-flex" role="search">
+                            <input
+                                id="query"
+                                name="query"
+                                class="form-control me-2"
+                                type="search"
+                                placeholder="Search..."
+                                aria-label="Search"
+                                value=""
+                            />
+                            <button class="btn btn-outline-primary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col container">
+    <div class="row justify-content-between">
+        <div class="col container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="fw-bold text-decoration-underline display-3">行星龙</h1>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    目前已知所有龙魂中最重的一只，它的魂体场也能会对人产生额外的心理压力，其仅仅只是普通地走动，都会让人产生山峦朝我崩塌下来一般的感觉。
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><strong>Internal ID:</strong> 61</div>
+            </div>
+        </div>
+        <div class="col">
+            <img class="float-end" height="400vh" src="../assets/dragon/61.png" alt="行星龙">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5 container">
+            <div class="row"><div class="col"><strong>Rating:</strong> 
+<span title="1">
+    
+        <i class="bi bi-star-fill" style="color: gold;"></i>
+    
+    
+        <i class="bi bi-star" style="color: grey;"></i>
+    
+        <i class="bi bi-star" style="color: grey;"></i>
+    
+        <i class="bi bi-star" style="color: grey;"></i>
+    
+</span>
+</div></div>
+            <div class="row"><div class="col"><strong>Type:</strong> <img src="../assets/type/earth.png"> Earth</div></div>
+            <div class="row"><div class="col"><strong>Base stats:</strong></div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>HP:</strong> 100</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>ATK:</strong> 90</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>MAT:</strong> 110</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>DEF:</strong> 120</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>MDF:</strong> 70</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11"><strong>SPD:</strong> 140</div></div>
+            
+            <div class="row"><div class="col"><strong><abbr title="When you win a battle, the XP all your living dragons earn is based off of the 'XP on Defeat' of the first enemy in the enemy party.">XP on Defeat:</abbr></strong>
+                12 DEF XP, 14 SPD XP
+            </div></div>
+            
+            <div class="row"><div class="col">&nbsp;</div></div>
+            
+            <div class="row"><div class="col"><strong>Found at:</strong> 慧心塔</div></div>
+            <div class="row"><div class="col"><strong>Contract conditions:</strong>
+                 Finish your opponent with a Earth support skill
+                    
+            </div></div>
+            <div class="row"><div class="col"><strong>Contract availibility chance:</strong> 50%</div></div>
+
+            <div class="row"><div class="col">&nbsp;</div></div>
+
+            
+            <div class="row"><div class="col"><strong>Level 15 Talent:</strong></div></div>
+            <div class="row"><div class="col-1"></div><div class="col-11">
+
+    <span><a href="../talent/10.html#坚壁">坚壁</a> - 土系伤害技能使自身获得护盾</span>
+
+</div></div>
+            <div class="row"><div class="col"><strong><abbr title="Both enemy and contracted dragons come into existence with a random second talent, among the following options. For your dragons, you can swap between these talents with certain items.">Level 20 Talent(s):</abbr></strong></div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11">
+
+    <span><a href="../talent/37.html#刚硬">刚硬</a> - HP25%以下时减免直接伤害</span>
+
+</div></div>
+            
+                <div class="row"><div class="col-1"></div><div class="col-11">
+
+    <span><a href="../talent/54.html#虹辉">虹辉</a> - 出场时获得20SP</span>
+
+</div></div>
+            
+        </div>
+        <div class="col-7 container">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Skill</th>
+                        <th scope="col">SP</th>
+                        <th scope="col">Power</th>
+                        <th scope="col">Effects</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Earth physical">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/5.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/physical.png">
+                                </span>
+                                <a href="../skill/275.html#幻彩切裂">幻彩切裂</a>
+                            </th>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>造成相当于自身护盾值两倍的间接伤害，之后失去护盾</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Earth support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/5.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/265.html#坚韧术">坚韧术</a>
+                            </th>
+                            <td>45</td>
+                            <td>0</td>
+                            <td>获得相当于自身最大HP65%的护盾</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Earth magical">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/5.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/magical.png">
+                                </span>
+                                <a href="../skill/287.html#地核能源">地核能源</a>
+                            </th>
+                            <td>20</td>
+                            <td>130</td>
+                            <td>对手处于能力弱化或自身具有护盾时威力翻倍，两者对威力的翻倍可叠加</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Earth support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/5.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/564.html#铸沙为甲">铸沙为甲</a>
+                            </th>
+                            <td>30</td>
+                            <td>0</td>
+                            <td>获得护盾，自身HP越少时获得的护盾越多</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Earth magical">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/5.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/magical.png">
+                                </span>
+                                <a href="../skill/253.html#地陷">地陷</a>
+                            </th>
+                            <td>35</td>
+                            <td>210</td>
+                            <td>弱化对手敏捷三级</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Earth magical">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/5.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/magical.png">
+                                </span>
+                                <a href="../skill/255.html#土崩">土崩</a>
+                            </th>
+                            <td>20</td>
+                            <td>110</td>
+                            <td>弱化对手防御三级</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Earth support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/5.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/256.html#上古能量">上古能量</a>
+                            </th>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>我方获得100SP但使自身长时间封印:无法使用威力120以下的技能</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Thunder support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/4.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/237.html#斥力">斥力</a>
+                            </th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>配置此技能时每次使用技能获得相当于自身魔防15%的护盾，本技能无法使用</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Earth support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/5.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/566.html#百炼">百炼</a>
+                            </th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>配置此技能时，自身获得的护盾量增加，本技能无法使用</td>
+                        </tr>
+                    
+                        
+                        <tr>
+                            <th scope="row">
+                                
+                                <span style="position: relative; top: 0px; left: 0px;" title="Thunder support">
+                                    <img style="position: relative; top: 0px; left: 0px;" src="../assets/skill/4.png">
+                                    <img style="position: absolute; top: 0px; left: 0px;" src="../assets/skillcat/support.png">
+                                </span>
+                                <a href="../skill/242.html#革新">革新</a>
+                            </th>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>回复相当于自身护盾值的HP，之后减半护盾</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+            </div>
+            <div class="row" style="height: 10vh"></div>
+        </div>
+        <footer class="fixed-bottom bg-body-tertiary container fs-xxs fs-xs-md fs-s-lg">
+            <div class="row">
+                <div class="col">Made using <a href="https://github.com/iconmaster5326/SpiritGuide">SpiritGuide</a>, version 0.1.1.</div>
+                <div class="col text-end">Page last updated on 2026-03-18 17:55:30 -0400.</div>
+            </div>
+            <div class="row">
+                <div class="col">All graphics used are property of <a href="https://store.steampowered.com/app/1074190/Dragon_Spirits/">FHNBHJ</a>. Content here is provided for informational puproses only.</div>
+                <div class="col text-end">My favourite dragon is Dualtail. What's yours?</div>
+            </div>
+        </footer>
+    </body>
+</html>
